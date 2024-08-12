@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fefae0;
+    text-transform: uppercase; /* add this line to make all text uppercase */
+    font-weight: bold; /* add this line to make all text bold */
+}
+
+.quote {
+    font-family: "Archivo Black";
+    position: absolute;
+    top: 4%;
+    left: 50.055%;
+    transform: translateX(-50%);
+    padding: 3px; /* decreased padding */
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.quote h1 {
+    font-size: 36px; /* decreased font size */
+    color: #fff;
+}
+
+.quote:hover {
+    border: 1px solid #fed9b7; /* change border color to neon blue */
+    box-shadow: 0 0 5px #fed9b7, 0 0 10px #fed9b7; /* add neon effect */
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.quote:hover h1 {
+    text-shadow: 0 0 5px #fed9b7, 0 0 10px #fed9b7; /* add neon effect to text */
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.container {
+    margin-top: 50px;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* translucent background */
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px); /* add blur effect */
+    -webkit-backdrop-filter: blur(1px); /* for Safari */
+    display: flex; /* add this line */
+    flex-direction: column; /* add this line */
+    align-items: center; /* add this line */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#player-count, #server-status, #copy-ip {
+    text-align: center; /* add this line */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+#player-count, #server-status {
+    font-size: 24px;
+    font-family: "Archivo Black";
+    font-weight: bold;
+    margin-left: 2px;
+    margin-bottom: 10px;
+}
+
+.player-count h2 {
+    margin-left: 52px;
+}
+
+#copy-ip {
+    font-family: "Archivo Black";
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(76, 175, 80, 0.3); /* translucent background */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px; /* add border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add box shadow */
+    backdrop-filter: blur(1px); /* add blur effect */
+    -webkit-backdrop-filter: blur(1px); /* for Safari */
+}
+
+#copy-ip:hover {
+    background-color: rgba(62, 142, 65, 0.3); /* translucent background on hover */
+}
+
+.panels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.panels {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.panel {
+    width: 80px; /* decreased width */
+    height: 80px; /* decreased height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* added border */
+}
+
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* added border */
+}
+
+.panel a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.panel i {
+    font-size: 36px;
+}
+
+.panel:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Add this media query for iPhone X */
+@media (max-width: 375px) and (max-height: 812px) {
+    .container {
+      height: 200px;
+      max-width: 340px; /* adjusted width for iPhone X */
+      padding: 15px; /* adjusted padding for iPhone X */
+      margin: 20px auto; /* adjusted margin for iPhone X */
+    }
+    section {
+      margin-bottom: 15px; /* adjusted margin for iPhone X */
+    }
+    #player-count, #server-status {
+      font-size: 18px; /* adjusted font size for iPhone X */
+    }
+    .quote {
+      font-size: 18px; /* adjusted font size for iPhone X */
+      padding: 12px; /* adjusted padding for iPhone X */
+      margin: 15px auto; /* adjusted margin for iPhone X */
+      width: 300px; /* adjusted width for iPhone X */
+      height: 120px; /* adjusted height for iPhone X */
+    }
+    .quote h1 {
+      font-size: 18px; /* adjusted font size for iPhone X */
+    }
+    .panels {
+      margin-top: 15px; /* adjusted margin for iPhone X */
+    }
+    .panel {
+      width: 60px; /* adjusted width for iPhone X */
+      height: 60px; /* adjusted height for iPhone X */
+      margin: 0 15px; /* adjusted margin for iPhone X */
+    }
+    /* Add this to adjust text size inside container */
+    .container h2, .container p {
+      font-size: 16px; /* adjusted font size for iPhone X */
+    }
+  }
+  
+  /* Add this to make the design more responsive */
+  @media (max-width: 375px) {
+    .container {
+      flex-direction: column; /* make the container a column on small screens */
+    }
+    .quote {
+      width: 100%; /* make the quote full-width on small screens */
+    }
+    .panels {
+      flex-wrap: wrap; /* make the panels wrap on small screens */
+    }
+    .panel {
+      margin: 10px; /* add margin to panels on small screens */
+    }
+    /* Add this to adjust text size inside container */
+    .container h2, .container p {
+      font-size: 14px; /* adjusted font size for small screens */
+    }
+  }
