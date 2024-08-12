@@ -1,5 +1,5 @@
 // Set background image
-document.getElementById('background').style.backgroundImage = "url('./assets/background.jpg')";
+document.getElementById('background').style.backgroundImage = "url('./background.jpg')";
 
 // Set server status and player count
 fetch('https://api.mcsrvstat.us/2/mc.hypixel.net')
